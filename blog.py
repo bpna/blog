@@ -5,6 +5,10 @@ from flask import render_template
 app = Flask(__name__)
 
 @app.route('/')
-@app.route('/blog')
-def blog():
-    return render_template('homepage.html')
+@app.route('/home')
+def home():
+    return render_template(
+            'home.html',
+            title='My Home Page',
+            mouseover='1 smart developer in your area <!> <!> <!> Click now!'
+            )
